@@ -1,8 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-title> Tab 3 </ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -12,6 +10,18 @@
       <ion-title size="large">Tab 3</ion-title>
     </ion-toolbar>
   </ion-header>
-
+  <ion-item>
+    <ion-label position="stacked">Stacked Label</ion-label>
+    <ion-input [(ngModel)]="nombre"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="stacked">Stacked Label</ion-label>
+    <ion-input [(ngModel)]="texto"></ion-input>
+  </ion-item>
+  <ion-item *ngFor="let mensaje of mensajes">
+    <ion-label>{{mensaje.mensaje}}</ion-label>
+  </ion-item>
+  <ion-button (click)="enviarMensaje()">Enviar mensaje</ion-button>
+  <ion-button (click)="enviarPedido()">Enviar pedido</ion-button>
   <app-explore-container name="Tab 3 page"></app-explore-container>
 </ion-content>
